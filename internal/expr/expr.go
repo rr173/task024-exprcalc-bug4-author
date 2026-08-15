@@ -427,7 +427,7 @@ func tokenize(s string) ([]token, error) {
 		case c == ' ' || c == '\t' || c == '\n' || c == '\r':
 			i++
 			continue
-		case isDigit(c):
+		case isDigit(c) || c == '.':
 			start := i
 			for i < len(s) && isDigit(s[i]) {
 				i++
